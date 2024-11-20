@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 24px;
+    background-color: #000; /* Fallback for unsupported gradients */
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://codetheworld.io/wp-content/uploads/2024/09/bg-1.jpeg') no-repeat center center/cover;
+    animation: anim 2.5s linear infinite;
+}
+
+@keyframes anim {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box {
+    width: 90%;
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    width: 100%;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.input-box {
+    width: 100%;
+    margin: 24px 0;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.input-box label {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 0.85em;
+    color: #ff9800;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.remember-forgot {
+    margin: 16px 0 32px 0;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-forgot input {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.remember-forgot a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffa726;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link p a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register-link p a:hover {
+    color: #fff;
+}
